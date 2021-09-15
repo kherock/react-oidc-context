@@ -1,5 +1,5 @@
 import React from "react";
-import { UserManager, UserManagerSettings, User } from "oidc-client";
+import { UserManager, UserManagerSettings, User } from "oidc-client-ts";
 
 import { AuthContext } from "./AuthContext";
 import { initialAuthState } from "./AuthState";
@@ -137,16 +137,16 @@ export const AuthProvider = (props: AuthProviderProps): JSX.Element => {
     );
 
     const signoutRedirect = React.useCallback(
-        async (args?: any): Promise<void> => {
-            await userManager.signoutRedirect(args);
+        async (): Promise<void> => {
+            await userManager.signoutRedirect();
             onSignoutRedirect && onSignoutRedirect();
         },
         [userManager, onSignoutRedirect]
     );
 
     const signoutPopup = React.useCallback(
-        async (args?: any): Promise<void> => {
-            await userManager.signoutPopup(args);
+        async (): Promise<void> => {
+            await userManager.signoutPopup();
             onSignoutPopup && onSignoutPopup();
         },
         [userManager, onSignoutPopup]
