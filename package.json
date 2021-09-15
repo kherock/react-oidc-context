@@ -31,10 +31,10 @@
   },
   "peerDependencies": {
     "react": ">=16",
-    "oidc-client": "^1.11.5"
+    "oidc-client-ts": "^2.0.0-alpha2"
   },
   "dependencies": {
-    "oidc-client": "^1.11.5"
+    "oidc-client-ts": "^2.0.0-alpha2"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.5.0",

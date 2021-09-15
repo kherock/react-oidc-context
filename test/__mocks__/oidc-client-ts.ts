@@ -1,6 +1,6 @@
-import type { UserManager, UserManagerEvents } from 'oidc-client'
+import type { UserManager } from 'oidc-client-ts'
 
-const MockUserManager: typeof UserManager = jest.fn(function (this: { events: Partial<UserManagerEvents>}) {
+const MockUserManager: typeof UserManager = jest.fn(function (this: { events: Partial<UserManager['events']>}) {
     this.events = {
         load: jest.fn(),
         unload: jest.fn(),

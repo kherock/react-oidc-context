@@ -1,4 +1,4 @@
-import { User } from "oidc-client";
+import { User } from "oidc-client-ts";
 
 import { AuthState } from "./AuthState";
 
