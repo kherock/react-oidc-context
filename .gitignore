@@ -1,5 +1,12 @@
+dist/
+lib/
+
+node_modules/
+
+.cache/
+.eslintcache
+*.tsbuildinfo
+
 *.log
 .DS_Store
-node_modules
-.cache
-dist
+temp/

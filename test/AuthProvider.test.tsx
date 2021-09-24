@@ -139,7 +139,7 @@ describe("AuthProvider", () => {
 
     it("should get the user", async () => {
         // arrange
-        mocked(UserManager.prototype).getUser.mockResolvedValue(user)
+        mocked(UserManager.prototype).getUser.mockResolvedValueOnce(user)
         const wrapper = createWrapper(settingsStub)
 
         // act

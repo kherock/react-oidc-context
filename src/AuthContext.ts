@@ -1,8 +1,11 @@
 import React from "react";
-import { UserManagerSettings, User, SessionStatus } from "oidc-client-ts";
+import type { UserManagerSettings, User, SessionStatus } from "oidc-client-ts";
 
-import { AuthState } from "./AuthState";
+import type { AuthState } from "./AuthState";
 
+/**
+ * @public
+ */
 export interface AuthContextProps extends AuthState {
     /**
      * UserManager functions. See [UserManager](https://github.com/pamapa/oidc-client-ts) for more details.
@@ -21,5 +24,6 @@ export interface AuthContextProps extends AuthState {
      stopSilentRenew(): void;
 }
 
+/** @public */
 export const AuthContext = React.createContext<AuthContextProps>(undefined as any);
 AuthContext.displayName = "AuthContext";

@@ -1,7 +1,9 @@
-import { User } from "oidc-client-ts";
+import type { User } from "oidc-client-ts";
 
 /**
  * The auth state which, when combined with the auth methods, make up the return object of the `useAuth` hook.
+ *
+ * @public
  */
 export interface AuthState {
     /**

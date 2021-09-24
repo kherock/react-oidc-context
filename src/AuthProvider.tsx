@@ -6,6 +6,9 @@ import { initialAuthState } from "./AuthState";
 import { reducer } from "./reducer";
 import { hasAuthParams, loginError } from "./utils";
 
+/**
+ * @public
+ */
 export interface AuthProviderProps extends UserManagerSettings {
     /**
      * The child nodes your Provider has wrapped
@@ -86,6 +89,8 @@ const defaultUserManagerImpl = typeof window === "undefined" ? null : UserManage
 
 /**
  * Provides the AuthContext to its child components.
+ *
+ * @public
  */
 export const AuthProvider = (props: AuthProviderProps): JSX.Element => {
     const {

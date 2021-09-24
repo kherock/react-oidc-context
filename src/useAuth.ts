@@ -2,6 +2,10 @@ import React from "react";
 
 import { AuthContext, AuthContextProps } from "./AuthContext";
 
+/**
+ *
+ * @public
+ */
 export const useAuth = (): AuthContextProps => {
     const context = React.useContext<AuthContextProps>(AuthContext);
 

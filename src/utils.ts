@@ -1,3 +1,6 @@
+/**
+ * @public
+ */
 export const hasAuthParams = (location = window.location): boolean => {
     // response_mode: query
     let searchParams = new URLSearchParams(location.search);
@@ -16,6 +19,9 @@ export const hasAuthParams = (location = window.location): boolean => {
     return false;
 };
 
+/**
+ * @public
+ */
 const normalizeErrorFn = (fallbackMessage: string) => (error: unknown): Error => {
     if (error instanceof Error) {
         return error;
@@ -23,4 +29,7 @@ const normalizeErrorFn = (fallbackMessage: string) => (error: unknown): Error =>
     return new Error(fallbackMessage);
 };
 
+/**
+ * @public
+ */
 export const loginError = normalizeErrorFn("Login failed");

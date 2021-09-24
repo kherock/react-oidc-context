@@ -1,6 +1,9 @@
 {
-    "include": ["."],
+    "extends": "../tsconfig.json",
     "compilerOptions": {
-        "jsx": "react",
-    }
+        "rootDir": "..",
+        "noEmit": true,
+        "tsBuildInfoFile": "tsconfig.tsbuildinfo"
+    },
+    "include": ["."]
 }

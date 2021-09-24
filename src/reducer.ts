@@ -1,6 +1,6 @@
-import { User } from "oidc-client-ts";
+import type { User } from "oidc-client-ts";
 
-import { AuthState } from "./AuthState";
+import type { AuthState } from "./AuthState";
 
 type Action =
   | { type:
